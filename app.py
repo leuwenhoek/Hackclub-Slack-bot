@@ -9,20 +9,21 @@ load_dotenv()
 app = App(token=os.getenv('SLACK_APP_TOKEN'))
 
 
-@app.message('/dsb-leuwen-ping')
+@app.command('/dsb-leuwen-ping')
 def ping(ack,respond):
     ack()
     ping_response=['Hlo lil boy so, you just pinged me?','Sup, pinged me?',"let's gooooo, hlo"]
     reply = random.choice(ping_response)
     respond(reply)
 
-@app.message('/dsb-leuwen-dev')
+@app.command('/dsb-leuwen-dev')
 def dev(ack,respond):
     ack()
     response='''
     Hi, this bot is developed by a 15yo tech geek Ayush :)
 '''
     respond(response)
+
 
 if __name__ == "__main__":
     handler = SocketModeHandler(
