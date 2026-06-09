@@ -6,7 +6,7 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 
 load_dotenv()
 
-app = App(token=os.getenv('SLACK_BOT_TOKEN'))
+app = App(token=os.environ["SLACK_BOT_TOKEN"])
 
 
 @app.command('/dsb-leuwen-ping')
@@ -28,6 +28,6 @@ def dev(ack,respond):
 if __name__ == "__main__":
     handler = SocketModeHandler(
         app,
-        os.getenv("SLACK_APP_TOKEN")
+        os.environ["SLACK_APP_TOKEN"]
     )
     handler.start()
