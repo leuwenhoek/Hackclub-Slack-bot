@@ -25,7 +25,7 @@ def ping(ack,respond):
 def dev(ack,respond):
     ack()
    
-    respond(block=[
+    respond(blocks=[
         {
   "blocks": [
     {
