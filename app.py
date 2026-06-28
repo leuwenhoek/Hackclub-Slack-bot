@@ -1,6 +1,6 @@
 import os
 import random
-import numpy
+import numpy as np
 from slack_bolt import App
 from dotenv import load_dotenv
 from slack_bolt.adapter.socket_mode import SocketModeHandler
@@ -57,12 +57,13 @@ def dev(ack, respond):
         ]
     )
 
+@app.command('/dsb-leuwen-matrix')
 @app.command('/dsb-leuwen-matix')
-def ping(ack,respond):
+def matrix_command(ack, respond):
     ack()
-    
-    matrix = np.array([[1, 2, 3], [4, 5, 6]])
-    respond(matrix)
+
+    matrix = np.random.randint(0, 100, size=(3, 3))
+    respond(f"Here is your random 3x3 matrix:\n```{matrix}```")
 
 if __name__ == "__main__":
     handler = SocketModeHandler(
