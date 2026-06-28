@@ -1,5 +1,6 @@
 import os
 import random
+import numpy
 from slack_bolt import App
 from dotenv import load_dotenv
 from slack_bolt.adapter.socket_mode import SocketModeHandler
@@ -56,6 +57,12 @@ def dev(ack, respond):
         ]
     )
 
+@app.command('/dsb-leuwen-matix')
+def ping(ack,respond):
+    ack()
+    
+    matrix = np.array([[1, 2, 3], [4, 5, 6]])
+    respond(matrix)
 
 if __name__ == "__main__":
     handler = SocketModeHandler(
