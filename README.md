@@ -33,7 +33,7 @@ An interactive command that leverages **Slack Block Kit** to display details abo
 * Tech interests (Python, C++, Flask, Web Dev, IoT/Arduino)
 * Skill badges (Python | C++ | Arduino | Flask | HTML/CSS | Git & GitHub | DSA)
 
-### 3. `/dsb-leuwen-matrix` (or `/dsb-leuwen-matix`)
+### 3. `/dsb-leuwen-matrix`
 Generates and displays a random $3 \times 3$ integer matrix with values between 0 and 99 formatted inside a code block.
 
 ---

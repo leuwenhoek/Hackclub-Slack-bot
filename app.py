@@ -58,7 +58,7 @@ def dev(ack, respond):
     )
 
 @app.command('/dsb-leuwen-matrix')
-@app.command('/dsb-leuwen-matix')
+@app.command('/dsb-leuwen-matrix')
 def matrix_command(ack, respond):
     ack()
 
