@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Slack Bot Banner" width="100%">
-</p>
-
 # 🤖 Hack Club Slack Bot
 
 A feature-rich and interactive Slack bot built using the **Slack Bolt for Python** framework and run via **Socket Mode**. This bot is live in the [Hack Club Slack](https://hackclub.com/slack/) server and is deployed on **NEST** (Hack Club's custom server environment).
